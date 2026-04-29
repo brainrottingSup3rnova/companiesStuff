@@ -12,9 +12,9 @@
 
 <body>
     <header class="container-fluid">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #ffb4a2;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Boh</a>
+                <a class="navbar-brand fw-bold" href="#">Company tracker</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,15 +31,15 @@
                 </div>
             </div>
         </nav>
-        <h1 class="ms-2 mt-2 mb-2">
+        <h1 class="ms-2 mb-2 fw-bold">
             Company details
         </h1>
     </header>
     <main class="container-fluid">
         <div class="row">
             <div class="col-md-4">
-                <div class="m-2 p-3 border rounded">
-                    <h2>
+                <div class="m-2 p-3 rounded">
+                    <h2 class="fw-semibold">
                         General information
                     </h2>
                     <form>
@@ -50,8 +50,8 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="m-2 p-3 border rounded">
-                    <h2>
+                <div class="m-2 p-3 rounded">
+                    <h2 class="fw-semibold">
                         Location
                     </h2>
                     <form>
@@ -65,8 +65,8 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="m-2 p-3 border rounded">
-                    <h2>
+                <div class="m-2 p-3 rounded">
+                    <h2 class="fw-semibold">
                         Activity details
                     </h2>
                     <form>
@@ -77,6 +77,11 @@
                         <textarea class="form-control" id="description" rows="3" placeholder="Description"></textarea>
                     </form>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-success me-md-2 mt-2" type="button"> Add company</button>
             </div>
         </div>
     </main>

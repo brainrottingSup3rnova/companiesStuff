@@ -1,7 +1,20 @@
 body {
-    background-color: #fce7ee !important;
+    padding-top: 7vh !important;
+    background-color: #ffcdb2 !important;
 }
 
 .m-2 {
-    background-color: #e8b1c4;
+    background-color: #ffb4a2;
+    border-color:#ffb4a2 !important;
+    height: 35vh !important;
+}
+
+.btn-success {
+    background-color: #e5989b !important;
+    border-color: #e5989b !important;
+    color: black;
+}
+
+.navbar {
+    width: 100% !important;
 }
