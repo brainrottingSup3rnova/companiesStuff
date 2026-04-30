@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Company tracker</title>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #ffb4a2;">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#">Company tracker</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="listOfCompanies.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="preferences.html">Add Company</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h1 class="ms-2 mb-2 fw-bold">
+            Home
+        </h1>
+        <p class="ms-2 fs-6 fst-italic">
+            Welcome to the company tracker. Here you can manage your companies.
+        </p>
+    </header>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="m-2 p-3 rounded">
+                    <h2 class="fw-semibold">
+                        General information
+                    </h2>
+                    <form>
+                        <label for="companyName" class="form-label">Company name</label>
+                        <input class="form-control" type="text" id="companyName" placeholder="Name" aria-label="Name">
+                        <label for="companyAddress" class="form-label mt-2">Company address</label>
+                        <input class="form-control" type="text" id="companyAddress" placeholder="Address" aria-label="Address">
+                        <label for="description" class="form-label mt-2">Description</label>
+                        <textarea class="form-control" id="description" rows="3" placeholder="Description"></textarea>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="m-2 p-3 rounded">
+                    <h2 class="fw-semibold">
+                        List of companies
+                    </h2>
+                    <p class="fs-6 fst-italic">
+                        Total companies: 0
+                    </p>
+                    <ul class="list-group">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid">
+        <div class="container-fluid text-muted ms-4 fixed-bottom border-top text-center">
+            Made with love by @brainrottingSup3rnova on GitHub
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -6,7 +6,7 @@ body {
 .m-2 {
     background-color: #ffb4a2;
     border-color:#ffb4a2 !important;
-    height: 35vh !important;
+    height: 40vh !important;
 }
 
 .btn-success {
@@ -17,4 +17,13 @@ body {
 
 .navbar {
     width: 100% !important;
+}
+
+.form-control:focus {
+    border-color: #e5989b !important; /* rosa */
+    box-shadow: 0 0 0 0.2rem rgba(150, 9, 9, 0.247) !important; /* alone rosa */
+    outline: none;
+}
+
+footer {
 }
