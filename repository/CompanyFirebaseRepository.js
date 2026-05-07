@@ -1,7 +1,7 @@
 import { IRepository } from './IRepository.js';
 import { Company } from '../domain/Company.js';
 
-const DB_BASE_URL = 'https://companytracker-1b5eb-default-rtdb.europe-west1.firebasedatabase.app/';
+const DB_BASE_URL = 'https://companytracker-1b5eb-default-rtdb.europe-west1.firebasedatabase.app';
 
 export class CompanyFirebaseRepository extends IRepository {
   async GetAll() {
@@ -17,7 +17,7 @@ export class CompanyFirebaseRepository extends IRepository {
     });
   }
 
-  async GetById() {
+  async GetById(id) {
     const res = await fetch(`${DB_BASE_URL}/companies/${id}.json`);
     if (!res.ok) throw new Error(`HTTP error ${res.status}`);
 
@@ -26,8 +26,13 @@ export class CompanyFirebaseRepository extends IRepository {
     return new Company({ Id: id, Name: item.Name ?? '', Address: item.Address ?? '', City: item.City ?? '', Activity: item.Activity ?? '', Description: item.Description ?? '' });
   }
 
-  async Save() {
-
+  async Save(company) {
+    await fetch(`${DB_BASE_URL}/companies/${company.Id}.json`, {
+      method: 'PUT',
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      body: JSON.stringify(company.toJSON())
+    });
   }
-
 }

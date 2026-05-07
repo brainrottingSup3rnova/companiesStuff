@@ -1,4 +1,3 @@
-import { Activity } from 'react';
 import { Company } from '../domain/Company.js'
 
 export class CompanyService {
@@ -7,13 +6,13 @@ export class CompanyService {
     }
 
     async GetAll () {
-        const companies = await this._repository.getAll();
+        const companies = await this._repository.GetAll();
         return companies;
     }
 
     async GetById(id) {
         if (!id.trim()) throw new Error('Id invalid');
-        return this._repository.getById(id);
+        return this._repository.GetById(id);
     }
 
     async Save(company) {
@@ -31,6 +30,6 @@ export class CompanyService {
             Activity: company.Activity,
             Description: company.Description
         });
-        return this._repository.save(newCompany);
+        return this._repository.Save(newCompany);
     }
 }

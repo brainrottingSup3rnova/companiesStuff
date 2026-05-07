@@ -3,22 +3,15 @@ import { CompanyFirebaseRepository } from '../repository/CompanyFirebaseReposito
 
 const companyService = new CompanyService(new CompanyFirebaseRepository());
 
-const list = document.getElementById(companiesList);
-const companyName = document.getElementById(listOfCompanies.html);
-const companyAddress = document.getElementById();
-const companyDescription = document.getElementById(description);
-const btnSave = document.getElementById(btnSave);
-
-const inputName = document.getElementById(companyName);
-const inputAddress = document.getElementById(companyAddress);
-const inputCity = document.getElementById(companyCity);
-const inputActivity = document.getElementById(companyActivity);
-const inputDescription = document.getElementById(companyDescription);
+const list = document.getElementById('companiesList');
+const companyName = document.getElementById('companyName');
+const companyAddress = document.getElementById('companyAddress');
+const companyDescription = document.getElementById('companyDescription');
 
 function renderCompanyDetail(company) {
-    companyName = company.Name || 'No name found';
-    companyAddress = company.Address || 'No address found';
-    companyDescription = company.Description || 'No description found'
+    companyName.value = company.Name || 'No name found';
+    companyAddress.value = company.Address || 'No address found';
+    companyDescription.textContent = company.Description || 'No description found';
 }
 
 async function init() {
@@ -45,16 +38,5 @@ async function init() {
         throw new Error("smth went wrong ig");
     }
 }
-
-btnSave.addEventListener('click', async () => {
-    const newCompany = {
-    Title: inputName,
-    Address: inputAddress,
-    City: inputCity,
-    Activity: inputActivity,
-    Description: inputDescription
-  };
-  await companyService.Save(newCompany);
-});
 
 init();
